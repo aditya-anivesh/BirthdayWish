@@ -167,3 +167,10 @@ body {
   transform: rotateY(180deg);
   width: 40vw; /* Ensure it stays the same width */
 }
+
+
+@media screen and (max-width: 768px) {
+    body {
+        display: none;
+    }
+}
