@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: rgba(174, 196, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Card Container */
+.card-container {
+  width: 400px; /* Adjusted width before opening */
+  height: 500px;
+  perspective: 1000px;
+}
+
+
+
+/* Card */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  background-color: #e45b2d;
+  border-radius: 15px;
+  padding: 0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cover Page */
+.card-front {
+  /* margin: auto; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  background: #e45b2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Cover Content */
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-content h1 {
+  font-size: 100px;
+}
+.cover-content h2 {
+  font-size: 100px;
+}
+.cover-text h1 {
+  font-size: 3vw;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.cover-text span {
+  font-size: 3.5vw;
+  color: #ffcc00;
+}
+
+/* Positioning the image to replace '0' in 2025 */
+.cover-image {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-front img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* Open Button */
+.open-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2vw;
+  font-weight: bold;
+  background: #f355b9;
+  color: white;
+  border: 2px solid gray;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.open-btn:hover {
+  font-size: 1.4vw;
+
+}
+
+/* Inside Pages */
+.card-inside {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Left Page */
+.left-page {
+  display: flex;
+  max-width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside-image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 90%; /* Prevent overflow */
+}
+
+/* Right Page */
+.right-page {
+  color: black;
+  max-width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-page h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.right-page p {
+  font-size: 1vw;
+  margin-top: 10px;
+}
+
+/* Signature */
+.signature {
+  margin-top: 20px;
+  font-size: 90px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* Card Open Effect */
+.card.open {
+  transform: rotateY(180deg);
+  width: 40vw; /* Ensure it stays the same width */
+}
